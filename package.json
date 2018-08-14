@@ -1,0 +1,19 @@
+{
+  "name": "get-tld",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/getTld.js",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "keywords": [],
+  "author": "Joe Khoury ,<jfkhoury@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "rollup": "^0.62.0",
+    "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-minify-es": "^1.1.1"
+  }
+}
