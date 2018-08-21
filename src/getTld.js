@@ -6,10 +6,10 @@ export default function getTld() {
         return "";
     }
     
-    const isCookieNotFound = () => global.document.cookie.indexOf(cookieName+'='+cookieName) === -1;
+    const isCookieNotFound = () => document.cookie.indexOf(cookieName+'='+cookieName) === -1;
     const getArrayItemsFromEnd = (arr, nbrOfItems) => arr.slice(-nbrOfItems);
     const expireCookie = domain =>
-        global.document.cookie = `${cookieName}=;expires=Thu, 01 Jan 1970 00:00:01 GMT;domain=${domain};`;
+        document.cookie = `${cookieName}=;expires=Thu, 01 Jan 1970 00:00:01 GMT;domain=${domain};`;
 
     function findTld() {
         let i = 0;
@@ -17,7 +17,7 @@ export default function getTld() {
 
         while(i < (parts.length - 1) && isCookieNotFound()) {
             domain = getArrayItemsFromEnd(parts, 1 + (++i)).join(".");
-            global.document.cookie = cookieName + "=" + cookieName + ";domain=" + domain + ";";
+            document.cookie = cookieName + "=" + cookieName + ";domain=" + domain + ";";
         }
 
         expireCookie(domain);

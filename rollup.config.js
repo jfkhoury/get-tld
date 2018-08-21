@@ -5,7 +5,7 @@ export default {
   input: 'src/getTld.js',
   output: {
     file: 'dist/getTld.js',
-    format: 'umd',
+    format: 'cjs',
     name: "getTld"
   },
   plugins: [
